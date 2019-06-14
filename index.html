@@ -14,6 +14,49 @@
     <h1>Train</h1>
 
 
+    <div id="main-container">
+
+        <div id="main-title">
+            <h1>Train Time Scheduler</h1>
+        </div>
+
+        <div id="current-schedule">
+            <h3>Current Schedule:</h3>
+            <table id="train-table" style="width:100%">
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival (HH-mm)</th>
+                    <th>Munites Away (min)</th>
+                </tr>
+
+            </table>
+
+
+        </div>
+
+        <div id="add-train">
+            <form action="#">
+                Train Name: <br>
+                <input class="form-input" type="text" id="train-name"> <br>
+                Destination: <br>
+                <input class="form-input" type="text" id="destination"> <br>
+                First Train Time HH-mm (00:00 - 24:00): <br>
+                <input class="form-input" type="text" id="first-time"> <br>
+                Frequency (min): <br>
+                <input class="form-input" type="text" id="frequency">
+                <br><br>
+                <button class="btn" id="submit">Submit</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
 
     <!-- --------------------------- SCRIPT --------------------------- -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
