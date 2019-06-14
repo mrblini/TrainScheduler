@@ -13,6 +13,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
+
 // itititalize variables to use across functions
 var trainName = "";
 var destination = "";
@@ -111,13 +112,6 @@ database.ref().on("value", function (snapshot) {
         nextArrival = snapshot.val().time;
     }
     console.log("minaway: " + minAway);
-    // if(timeNowSec > firstTimeSec) {
-    //   
-    //   
-    //   minAway = (secToMidnight + firstTimeSec)/60;
-    // }else {
-    //   minAway = (timeNowSec - firstTimeSec) / 60;
-    // }
 
     // Change the HTML and add the data with database data for veiwing across browsers
     var newRow = $("<tr> <td>" + snapshot.val().name + "</td><td>" + snapshot.val().dest + "</td><td>" + snapshot.val().freq + "</td><td>" + nextArrival + "</td><td>" + minAway + "</td></tr>");
